@@ -13,7 +13,7 @@ for target in ".ctags"; do
   ln_target="$HOME/$target"
   ln_source="$(dirname "$(realpath "${BASH_SOURCE[0]}")")/$target"
 
-  if [[ -f "$ln_target" ]]; then
+  if [[ -e "$ln_target" ]]; then
     if [[ $is_force = true ]]; then
       rm -fr "$ln_target"
     else
